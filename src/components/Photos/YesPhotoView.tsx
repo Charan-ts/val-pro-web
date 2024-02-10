@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
-import img1 from '../../Images/Bhumika/1.jpg'
-import img11 from '../../Images/Bhumika/11.jpg'
-import img12 from '../../Images/Bhumika/12.jpg'
-import img14 from '../../Images/Bhumika/14.jpg'
-import img15 from '../../Images/Bhumika/15.jpg'
-import img17 from '../../Images/Bhumika/17.jpg'
-import img2 from '../../Images/Bhumika/2.jpg'
-import img4 from '../../Images/Bhumika/4.jpg'
-import img5 from '../../Images/Bhumika/5.jpg'
-import img9 from '../../Images/Bhumika/9.jpg'
+import img1 from '../../Images/Pictures/1.jpg'
+import img11 from '../../Images/Pictures/11.jpg'
+import img12 from '../../Images/Pictures/12.jpg'
+import img14 from '../../Images/Pictures/14.jpg'
+import img15 from '../../Images/Pictures/15.jpg'
+import img17 from '../../Images/Pictures/17.jpg'
+import img2 from '../../Images/Pictures/2.jpg'
+import img4 from '../../Images/Pictures/4.jpg'
+import img5 from '../../Images/Pictures/5.jpg'
+import img9 from '../../Images/Pictures/9.jpg'
 import HeartLoader from '../Loader/HeartLoader'
 import './photo-view.scss'
 
@@ -40,16 +40,16 @@ const YesPhotoView = () => {
     setTimeout(() => setIsLoading(false), 3000)
   }, [])
 
-  const openLightbox = (src: string, alt: string) => {
-    setImage(src)
-    setLightboxImage(src)
-    setLightboxAltImage(alt)
-  }
+  // const openLightbox = (src: string, alt: string) => {
+  //   setImage(src)
+  //   setLightboxImage(src)
+  //   setLightboxAltImage(alt)
+  // }
 
-  const closeLightbox = () => {
-    setLightboxImage('')
-    setLightboxAltImage('')
-  }
+  // const closeLightbox = () => {
+  //   setLightboxImage('')
+  //   setLightboxAltImage('')
+  // }
 
   // return (
   //   <>
@@ -129,6 +129,22 @@ const YesPhotoView = () => {
       ) : (
         <div>
           <div className='gallery'>{getImages}</div>
+          <div className='wrapper'>
+            <p>Y</p>
+            <p>A</p>
+            <p>Y</p>
+
+            {/* <p>M</p>
+            <p>Y</p>
+            <p> </p>
+            <p>G</p>
+            <p>A</p>
+            <p>L</p>
+            <p>L</p>
+            <p>E</p>
+            <p>R</p>
+            <p>Y</p> */}
+          </div>
         </div>
       )}
     </>

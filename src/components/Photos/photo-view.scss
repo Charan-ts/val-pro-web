@@ -36,7 +36,7 @@ button {
     border: 10px solid white;
     border-bottom: 40px solid white;
     transition: opacity 300ms, transform ease-in-out 300ms;
-    animation: grow 2s ease-in-out 0s; 
+    animation: grow 2s ease-in-out 0s;
     background-color: #82a6a9b0;
 }
 
@@ -112,7 +112,7 @@ img {
     /* size of the frame */
     --b: 2px;
     /* border thickness */
-    --w: 270px;
+    --w: 265px;
     /* width of the image */
     --c: #7B3B3B;
 
@@ -163,12 +163,17 @@ body {
 }
 
 @keyframes swing {
-    0% { transform: rotate(3deg); }
-    100% { transform: rotate(-3deg); }
+    0% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
 }
 
 // .grow {
-    
+
 // }
 
 @keyframes grow {
@@ -178,5 +183,74 @@ body {
 
     to {
         transform: scale(1);
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+
+    p {
+        font-size: 50px;
+        font-family: Bowlby One SC, sans-serif;
+        transform: scale(0.9, 1) rotatey(-10deg) translatey(0px);
+        animation: 2.2s scaling cubic-bezier(0.45, 0, 0.55, 1) infinite;
+        text-shadow: 0 0 #e8332e, 0 0 #fc9e05, 0 0 #891696;
+        transform-origin: 50% 100%;
+        color: #fff;
+        position: relative;
+        top: 10%;
+        transform-style: preserve-3d;
+        margin-right: 4px;
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: 140ms * $i;
+            }
+        }
+    }
+}
+
+@keyframes scaling {
+    20% {
+        text-shadow: 0px 0 #e8332e, 0px 0 #fc9e05, 0px 0 #891696;
+        transform: scale(0.9, 1) rotatey(-10deg);
+    }
+
+    40% {
+        transform: scale(0.9, 2) translatey(16px);
+        text-shadow: -10px 0px #e8332e, -20px 0 #fc9e05, -30px 0 #891696;
+    }
+
+    60% {
+        transform: scale(0.9, 1) rotatey(-5deg);
+        text-shadow: 0px 0 #e8332e, 0px 0 #fc9e05, 0px 0 #891696;
+    }
+
+    80% {
+        transform: scale(0.9, 2) translatey(16px);
+        text-shadow: 10px 0px #e8332e, 20px 0 #fc9e05, 30px 0 #891696;
+    }
+}
+
+@keyframes jump {
+    20% {
+        transform: translatey(0) scale(0);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translatey(-50px) scale(1);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translatey(0) scale(0);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translatey(-50px) scale(1);
+        opacity: 1;
     }
 }

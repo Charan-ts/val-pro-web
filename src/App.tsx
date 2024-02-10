@@ -14,7 +14,7 @@ import FirstPortion from './components/FirstPortion/FirstPortion'
 import HeartLoader from './components/Loader/HeartLoader'
 import YesPhotoView from './components/Photos/YesPhotoView'
 
-import beauty from './Images/Bhumika/saree.jpg'
+import beauty from './Images/Pictures/saree.jpg'
 import Slider from './components/Slider/Slider'
 
 const images: any[] = [
@@ -32,7 +32,7 @@ const images: any[] = [
 const stories: any[] = [
   [
     'Story (Ondh Kathe Hel la😉)',
-    'Hey Puttu, Idhondhu chick story naan heltha iradhu nammibra bagge. E picture galu adhke ondhu roles thara nin lazy brain ge artha agli antha. Ninge bari helidre artha agalla alva adhke picture jothe heltha ideni ivagadru a lazy brain ge artha agli onchooru correct agli work maadli antha😂. So start maadana...</br> </br> Neen opkolo a moment indha nam love inna sakathagi start agutte illi ninna yaaru judge maadalla expections irutte chik chik dhu adhen maadak agalla love id kade jagla expectation bejaru ivella irodhe. Aaaan naav otge suthado time spend maaado time hinge nin kai bid de ella kade karkondu hogbeku suthbeku ninna magu thara nodkobeku neen nan jothe iddagella, Naanu swalp careless eh atara annisdhaga ondhu bittu thalege chanagi nodko saalthilla anbeku neenu aste simple alva just best friends things ivaglunu amelenu.',
+    'Hey Puttu, Idhondhu chick story naan heltha iradhu nammibra bagge. E picture galu adhke ondhu roles thara nin lazy brain ge artha agli antha. Ninge bari helidre artha agalla alva adhke picture jothe heltha ideni ivagadru a lazy brain ge artha agli onchooru correct agli work maadli antha😂. So start maadana...</br> </br> Neen nanna artha maadkolo a moment indha nam love inna sakathagi start agutte illi ninna yaaru judge maadalla expections irutte chik chik dhu adhen maadak agalla love id kade jagla expectation bejaru ivella irodhe. Aaaan naav otge suthado time spend maaado time hinge nin kai bid de ella kade karkondu hogbeku suthbeku ninna magu thara nodkobeku neen nan jothe iddagella, Naanu swalp careless eh atara annisdhaga ondhu bittu thalege chanagi nodko saalthilla anbeku neenu aste simple alva just best friends things ivaglunu amelenu.',
   ],
   [
     'Nam Madve (Madveno Madve🤞)',
@@ -73,10 +73,10 @@ const stories: any[] = [
 ]
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [showPic, setShowPic] = useState<boolean>(false);
-  const [showFirstPortion, setShowFirstPortion] = useState<boolean>(true);
-  const [showImageSlider, setShowImageSlider] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [showPic, setShowPic] = useState<boolean>(false)
+  const [showFirstPortion, setShowFirstPortion] = useState<boolean>(true)
+  const [showImageSlider, setShowImageSlider] = useState<boolean>(false)
 
   useEffect(() => {
     timeOutFunction(2000, false)
@@ -110,7 +110,17 @@ const App = () => {
       setShowFirstPortion(false)
       setShowImageSlider(true)
       setShowPic(false)
-    }, 5000)
+    }, 10000)
+  }
+
+  const onCloseSlider = () => {
+    setIsLoading(true)
+    setTimeout(() => {
+      setShowImageSlider(false)
+      setIsLoading(false)
+      setShowPic(false)
+      setShowFirstPortion(false)
+    }, 2000)
   }
 
   return (
@@ -123,14 +133,19 @@ const App = () => {
             <FirstPortion onShowBackGroundPic={onShowBackGroundPic} />
           )}
 
+          {!isLoading && showImageSlider && !showFirstPortion && (
+            <div>
+              <Slider
+                imageLists={images}
+                stories={stories}
+                onCloseSlider={onCloseSlider}
+              />
+            </div>
+          )}
+
           {!isLoading && !showImageSlider && !showFirstPortion && (
             <YesPhotoView />
           )}
-
-          {!isLoading && showImageSlider && !showFirstPortion && (
-            <div><Slider imageLists={images} stories={stories} /></div>
-          )}
-          {/* <Slider imageLists={images} stories={stories} /> */}
         </div>
       </div>
     </>

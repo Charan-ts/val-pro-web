@@ -53,17 +53,17 @@ const FirstPortion = (props: any) => {
             <Typewriter
               onInit={typewriter => {
                 typewriter
-                  // .typeString(
-                  //   'Hoooo en madam eno type maadtha idera... Name uh🤔?. '.toUpperCase()
-                  // )
-                  // .pauseFor(1000)
-                  // .typeString(
-                  //   'Matte type maadi yaake, type maadake agthilva maya agoita😂, '.toUpperCase()
-                  // )
-                  // .pauseFor(1000)
-                  // .typeString(
-                  //   'Eno nin name nange gottilla anno thara idhu maadiradhe ninge nayi, Ninge Noora entu name naane ittideni kana tm kelgade iro heart🫰 click maadu, Nin name nane helthini'.toUpperCase()
-                  // )
+                  .typeString(
+                    'Hoooo en madam eno type maadtha idera... Name uh🤔?. '.toUpperCase()
+                  )
+                  .pauseFor(1000)
+                  .typeString(
+                    'Matte type maadu yaake, type maadake agthilva maya agoita bangari😂, '.toUpperCase()
+                  )
+                  .pauseFor(1000)
+                  .typeString(
+                    'Eno nin name nange gottilla anno thara idhu maadiradhe ninge nayi a box sumne ninge chamak kodake, Ninge Noora entu name naane ittideni tm kelgade iro heart🫰 press maadu. Jorag press maadbeda novagutte aste😜.'.toUpperCase()
+                  )
                   .start()
                   .callFunction(onTyingCmplt)
               }}

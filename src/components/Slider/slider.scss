@@ -99,6 +99,7 @@ body {
 .slide-item .des {
     margin: 20px 0;
     opacity: 0;
+    font-size: larger;
     animation: showcontent 2s ease-in-out 0.3s 1 forwards
 }
 
@@ -145,4 +146,16 @@ body {
 
 .buttons button:hover {
     background-color: #d76b93;
+}
+
+.closeBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 15%;
+    border: 1px solid #555;
+    transition: 0.5s;
+}
+
+.closeBtn:hover {
+    background-color: red;
 }

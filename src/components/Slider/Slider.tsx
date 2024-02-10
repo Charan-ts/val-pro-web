@@ -1,20 +1,26 @@
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import {
+  faAngleLeft,
+  faAngleRight,
+  faClose,
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import './slider.scss'
 
-const Slider = ({ imageLists, stories }: any) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const Slider = ({ imageLists, stories, onCloseSlider }: any) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [nxtBtnDisabled, setNxtBtnDisabled] = useState(false)
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(false)
 
   const handlePrevClick = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + imageLists.length) % imageLists.length);
-  };
-  
+    setCurrentImageIndex(
+      prevIndex => (prevIndex - 1 + imageLists.length) % imageLists.length
+    )
+  }
+
   const handleNextClick = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageLists.length);
-  };
+    setCurrentImageIndex(prevIndex => (prevIndex + 1) % imageLists.length)
+  }
 
   useEffect(() => {
     const handleNext = () => {
@@ -73,20 +79,31 @@ const Slider = ({ imageLists, stories }: any) => {
   return (
     <>
       <div className='slider-container'>
+        <div style={{ position: 'absolute', zIndex: 9, right: '2vh' }}>
+          <button
+            className='closeBtn'
+            onClick={onCloseSlider}>
+            <FontAwesomeIcon icon={faClose} />
+          </button>
+        </div>
         <div id='slide'>
           {imageLists.map((image: any, i: number) => (
             <div
               key={i}
-              className={`slide-item ${i === currentImageIndex ? 'active' : ''}`}
+              className={`slide-item ${
+                i === currentImageIndex ? 'active' : ''
+              }`}
               style={{ backgroundImage: `url(${image})` }}>
               <div className='slide-content'>
                 <div className='slide-name'>{stories?.[i]?.[0]}</div>
                 <div
                   className='des'
-                  dangerouslySetInnerHTML={{ __html: stories?.[i]?.[1] ?? '' }} />
+                  dangerouslySetInnerHTML={{ __html: stories?.[i]?.[1] ?? '' }}
+                />
               </div>
             </div>
           ))}
+          b
         </div>
         <div className='buttons'>
           <button
