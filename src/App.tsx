@@ -110,7 +110,7 @@ const App = () => {
       setShowFirstPortion(false)
       setShowImageSlider(true)
       setShowPic(false)
-    }, 10000)
+    }, 12000)
   }
 
   const onCloseSlider = () => {
@@ -120,13 +120,15 @@ const App = () => {
       setIsLoading(false)
       setShowPic(false)
       setShowFirstPortion(false)
-    }, 2000)
+    }, 1000)
   }
 
   return (
     <>
       <div className='App'>
-        <div className='App-header' style={showPic ? withPic : withoutPic}>
+        <div
+          className={showPic ? 'App-header bounce-in' : 'App-header'}
+          style={showPic ? withPic : withoutPic}>
           {isLoading && <HeartLoader />}
 
           {!isLoading && !showImageSlider && showFirstPortion && (

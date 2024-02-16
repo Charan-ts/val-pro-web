@@ -10,7 +10,14 @@ import img4 from '../../Images/Pictures/4.jpg'
 import img5 from '../../Images/Pictures/5.jpg'
 import img9 from '../../Images/Pictures/9.jpg'
 import HeartLoader from '../Loader/HeartLoader'
+import TypingText from '../Text/TypingText'
 import './photo-view.scss'
+
+import img10 from '../../Images/Pictures/10.jpg'
+import img13 from '../../Images/Pictures/13.jpg'
+import img18 from '../../Images/Pictures/18.png'
+import img7 from '../../Images/Pictures/7.jpg'
+import img8 from '../../Images/Pictures/8.jpg'
 
 export interface Image {
   src: string
@@ -18,16 +25,21 @@ export interface Image {
 }
 
 const images: Image[] = [
-  { src: img5, alt: 'Image 05' },
-  { src: img4, alt: 'Image 04' },
-  { src: img11, alt: 'Image 11' },
-  { src: img1, alt: 'Image 01' },
-  { src: img9, alt: 'Image 09' },
-  { src: img2, alt: 'Image 02' },
-  { src: img12, alt: 'Image 12' },
-  { src: img17, alt: 'Image 17' },
-  { src: img15, alt: 'Image 15' },
-  { src: img14, alt: 'Image 14' },
+  { src: img5, alt: 'Baby Doll' },
+  { src: img4, alt: 'Cap Queen' },
+  { src: img11, alt: 'Dressed to kill' },
+  { src: img1, alt: 'Shy Chick' },
+  { src: img9, alt: 'Cutiepie' },
+  { src: img2, alt: 'Electric Eyes' },
+  { src: img12, alt: 'Joyful Jam' },
+  { src: img17, alt: 'Sleeping Beauty' },
+  { src: img15, alt: 'Natural Beauty' },
+  { src: img14, alt: 'Eating Monkey' },
+  { src: img7, alt: 'Dashing' },
+  { src: img8, alt: 'Princess' },
+  { src: img10, alt: 'Lovable Lady' },
+  { src: img13, alt: 'Cool Girl' },
+  { src: img18, alt: 'Adventurous' },
 ]
 
 const YesPhotoView = () => {
@@ -115,9 +127,15 @@ const YesPhotoView = () => {
 
   const getImages = useMemo(() => {
     const shuffledImages = shuffleArray(images)
+    // const shuffledImages = images;
     return shuffledImages.map((image, index) => (
-      <div tabIndex={1} className='gallery__item' key={index}>
-        <img src={image.src} alt={image.alt} loading='lazy' />
+      <div className='wrap'>
+        <div tabIndex={1} className='gallery__item' key={index}>
+          <img src={image.src} alt={image.alt} loading='lazy' />
+        </div>
+        <div className='photo-label'>
+          <TypingText property={image.alt} />
+        </div>
       </div>
     ))
   }, [])
@@ -127,7 +145,8 @@ const YesPhotoView = () => {
       {isLoading ? (
         <HeartLoader />
       ) : (
-        <div>
+        <div
+          style={{ overflowY: 'scroll', height: '97vh', overflowX: 'hidden' }}>
           <div className='gallery'>{getImages}</div>
           <div className='wrapper'>
             <p>Y</p>
