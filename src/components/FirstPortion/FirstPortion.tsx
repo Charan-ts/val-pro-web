@@ -62,7 +62,7 @@ const FirstPortion = (props: any) => {
                   )
                   .pauseFor(1000)
                   .typeString(
-                    'Eno nin name nange gottilla anno thara idhu maadiradhe ninge nayi a box sumne ninge chamak kodake, Ninge Noora entu name naane ittideni tm kelgade iro heart🫰 press maadu. Jorag press maadbeda novagutte aste😜.'.toUpperCase()
+                    'Eno nin name nange gottilla anno thara idhu maadiradhe ninge nayi a box sumne ninge chamak kodake, Ninge Noora entu name naane ittideni tm kelgade iro heart❤️ press maadu. Jorag press maadbeda novagutte aste😜.'.toUpperCase()
                   )
                   .start()
                   .callFunction(onTyingCmplt)
