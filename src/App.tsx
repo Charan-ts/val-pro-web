@@ -105,7 +105,7 @@ const App = () => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     margin: '10px',
-    width: '208vh',
+    width: '219vh',
   }
 
   const onShowBackGroundPic = () => {
