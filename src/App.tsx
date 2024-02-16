@@ -75,7 +75,7 @@ const stories: any[] = [
   [
     'Happy Ending (Story Illigu Mugitu🤭)',
     `<i><b>I adore you so much, I adore you so much your smile, your hands, your talk. I adore you so much that staring into your eyes seem like my favorite hobby. I adore you so much that even if I feel low I'll cheer up if that's what makes you happy. I adore you so much that every fligt I take I wish the destination is you, but until then I'm glad you're the first person I text. I adore you so much I can spend hours doing nothing with you. I adore you so much that I'll take evry opportunity to call you mine, I know you hate cliches but will you be my valentine?...</i></b></br></br>Mugithu aste matte sigona mundhina jhanmadhalli...😘 
-    </br>Alli Melgade pic alliro close button press maddu`,
+    </br>(Alli Melgade pic alliro close button press maddu)`,
   ],
 ]
 
@@ -105,7 +105,7 @@ const App = () => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     margin: '10px',
-    width: '205vh',
+    width: '208vh',
   }
 
   const onShowBackGroundPic = () => {
