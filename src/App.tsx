@@ -73,7 +73,7 @@ const stories: any[] = [
     `Aaaaan Vayasagogutte time hogadhe gottagalla, bekadhavru jotegidre ella kansu andhage agogutte. Matte naavellaru maklu ago time, Matte magu thara ado time, Ellrgu irritate maado time.</br> Naavu madve li ako 7 hejje li idhe 1st janma ankondre a 1 hejje complete ago time. Konege time hogtha hogtha ellargu naavu memories ago time.</br> So konege nammibru hallu udrogi thinnake matadake kasta agthidru avaglu ninna iste ista padthini and the time we realize nammatra jaasthi time illa adre iro thanka yaargu bhaara agdhe otge irona anno time. </br> <i><b>En andre ista padoru jothege idre vayasagoytu annodhu asten kasta annisalla alva🤭...</i></b>`,
   ],
   [
-    'Happy Ending (Story Illigu Mugitu🤭)',
+    'Happy Ending (Story Illige Mugitu🤭)',
     `<i><b>I adore you so much, I adore you so much your smile, your hands, your talk. I adore you so much that staring into your eyes seem like my favorite hobby. I adore you so much that even if I feel low I'll cheer up if that's what makes you happy. I adore you so much that every fligt I take I wish the destination is you, but until then I'm glad you're the first person I text. I adore you so much I can spend hours doing nothing with you. I adore you so much that I'll take evry opportunity to call you mine, I know you hate cliches but will you be my valentine?...</i></b></br></br>Mugithu aste matte sigona mundhina jhanmadhalli...😘 
     </br>(Alli Melgade pic alliro close button press maddu)`,
   ],
